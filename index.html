@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam Study Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .exam-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .exam-info h3 {
+            margin: 0 0 10px 0;
+            color: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        .time-col {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            width: 80px;
+        }
+        .meal {
+            background-color: #f39c12;
+            color: white;
+            font-weight: bold;
+        }
+        .church {
+            background-color: #03133fa9;
+            color: white;
+            font-weight: bold;
+        }
+        .exam-day {
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+        }
+        .commute {
+            background-color: #95a5a6;
+            color: white;
+            font-weight: bold;
+        }
+        .econ {
+            background-color: #27ae60;
+            color: white;
+        }
+        .compsci220 {
+            background-color: #3498db;
+            color: white;
+        }
+        .physics {
+            background-color: #e67e22;
+            color: white;
+        }
+        .compsci210 {
+            background-color: #8e44ad;
+            color: white;
+        }
+        .free {
+            background-color: #bdc3c7;
+            color: #2c3e50;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Final Exam Study Schedule</h1>
+        <p style="text-align: center; color: #7f8c8d; margin-bottom: 30px;">June 5-24, 2025 | Daily Schedule: 9:00 AM - 12:00 AM</p>
+        
+        
+        <div class="exam-info">
+            <h3>📅 Exam Schedule Overview:</h3>
+            <p><strong>ECON 151:</strong> June 12th, 2pm - 4:15pm</p>
+            <p><strong>COMPSCI 220:</strong> June 16th, 2pm - 4:15pm</p> 
+            <p><strong>PHYSICS 140:</strong> June 19th, 2pm - 4:15pm</p>
+            <p><strong>COMPSCI 210:</strong> June 24th, 9am - 11:15am</p>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color econ"></div>
+                <span>ECON 151</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color compsci220"></div>
+                <span>COMPSCI 220</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color physics"></div>
+                <span>PHYSICS 140</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color compsci210"></div>
+                <span>COMPSCI 210</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color meal"></div>
+                <span>Meals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color church"></div>
+                <span>Church</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color exam-day"></div>
+                <span>Exam</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color commute"></div>
+                <span>Commute</span>
+            </div>
+        </div>
+
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Fri 6/6</th>
+                    <th>Sat 6/7</th>
+                    <th>Sun 6/8</th>
+                    <th>Mon 6/9</th>
+                    <th>Tue 6/10</th>
+                    <th>Wed 6/11</th>
+                    <th>Thu 6/12</th>
+                    <th>Fri 6/13</th>
+                    <th>Sat 6/14</th>
+                    <th>Sun 6/15</th>
+                    <th>Mon 6/16</th>
+                    <th>Tue 6/17</th>
+                    <th>Wed 6/18</th>
+                    <th>Thu 6/19</th>
+                    <th>Fri 6/20</th>
+                    <th>Sat 6/21</th>
+                    <th>Sun 6/22</th>
+                    <th>Mon 6/23</th>
+                    <th>Tue 6/24</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                    <td class="time-col">7:00</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="commute">Commute to COMPSCI 210</td>
+                </tr>               
+                 <tr>
+                    <td class="time-col">8:00</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="commute">Commute to COMPSCI 210</td>
+                </tr>   
+                <tr>
+                    <td class="time-col">9:00</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="meal">Breakfast</td>
+                    <td class="exam-day">COMPSCI 210 EXAM</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:00</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="church">Church</td>
+                    <td class="econ">ECON Workshop and Topic Questions 5</td>
+                    <td class="econ">ECON Workshop and Topic Questions 10</td>
+                    <td class="econ">ECON Sample Final 1</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="compsci220">CS220 Tutorial 6</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="church">Church</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="physics">PHYS Coursebook Rev</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="compsci210">CS210 Coderunner 3-4</td>
+                    <td class="compsci210">CS210 Past Paper</td>
+                    <td class="compsci210">CS210 Past Paper</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="exam-day">COMPSCI 210 EXAM</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="church">Church</td>
+                    <td class="econ">ECON Workshop and Topic Questions 5</td>
+                    <td class="econ">ECON Workshop and Topic Questions 10</td>
+                    <td class="econ">ECON Sample Final 1</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="compsci220">CS220 Tutorial 6</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="church">Church</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="physics">PHYS Coursebook Rev</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="compsci210">CS210 Coderunner 3-4</td>
+                    <td class="compsci210">CS210 Past Paper</td>
+                    <td class="compsci210">CS210 Past Paper</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="exam-day">COMPSCI 210 EXAM</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:00</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="commute">Commute to School</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="commute">Commute to School</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="commute">Commute to School</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="meal">Lunch</td>
+                    <td class="free">Celebrate! 🎉</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="econ">ECON Review</td>
+                    <td class="commute">Commute to School</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="commute">Commute to School</td>
+                    <td class="free">Free Time</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="commute">Commute to School</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:00</td>
+                    <td class="econ">ECON Topic 10 - Part 6 to Part 8</td>
+                    <td class="compsci210">COMPSCI 210 & 220 Final Lectures</td>
+                    <td class="econ">ECON Workshop and Topic Questions 3</td>
+                    <td class="econ">ECON Workshop and Topic Questions 6</td>
+                    <td class="econ">ECON Sample Final 1</td>
+                    <td class="econ">ECON Sample Final 2</td>
+                    <td class="exam-day">ECON 151 EXAM</td>
+                    <td class="compsci220">CS220 Tutorial 7</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="exam-day">COMPSCI 220 EXAM</td>
+                    <td class="physics">PHYS 2013 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="exam-day">PHYSICS 140 EXAM</td>
+                    <td class="compsci210">CS210 Coderunner 5-6</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00</td>
+                    <td class="compsci210">COMPSCI 210 - Thursday Lecture</td>
+                    <td class="econ">ECON Final Workshop</td>
+                    <td class="econ">ECON Workshop and Topic Questions 3</td>
+                    <td class="econ">ECON Workshop and Topic Questions 6</td>
+                    <td class="econ">ECON Sample Final 1</td>
+                    <td class="econ">ECON Sample Final 2</td>
+                    <td class="exam-day">ECON 151 EXAM</td>
+                    <td class="compsci220">CS220 Tutorial 7</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="exam-day">COMPSCI 220 EXAM</td>
+                    <td class="physics">PHYS 2013 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="exam-day">PHYSICS 140 EXAM</td>
+                    <td class="compsci210">CS210 Coderunner 5-6</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:00</td>
+                    <td class="econ">ECON Workshop and Topic Questions 1</td>
+                    <td class="econ">ECON Workshop and Topic Questions 2</td>
+                    <td class="econ">ECON Workshop and Topic Questions 3</td>
+                    <td class="econ">ECON Workshop and Topic Questions 7</td>
+                    <td class="econ">ECON Sample Final 2</td>
+                    <td class="econ">ECON Sample Final 3</td>
+                    <td class="exam-day">ECON 151 EXAM</td>
+                    <td class="compsci220">CS220 Tutorial 8</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="exam-day">COMPSCI 220 EXAM</td>
+                    <td class="physics">PHYS 2017 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="exam-day">PHYSICS 140 EXAM</td>
+                    <td class="compsci210">CS210 Coderunner 7-8</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00</td>
+                    <td class="econ">ECON Workshop and Topic Questions 1</td>
+                    <td class="econ">ECON Workshop and Topic Questions 2</td>
+                    <td class="econ">ECON Workshop and Topic Questions 3</td>
+                    <td class="econ">ECON Workshop and Topic Questions 7</td>
+                    <td class="econ">ECON Sample Final 2</td>
+                    <td class="econ">ECON Sample Final 3</td>
+                    <td class="commute">Commute Home</td>
+                    <td class="compsci220">CS220 Tutorial 8</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="commute">Commute Home</td>
+                    <td class="physics">PHYS 2017 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="commute">Commute Home</td>
+                    <td class="compsci210">CS210 Coderunner 7-8</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:00</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                    <td class="meal">Dinner</td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:00</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="free">Free Time</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:00</td>
+                    <td class="econ">ECON Workshop and Topic Questions 1</td>
+                    <td class="econ">ECON Workshop and Topic Questions 2</td>
+                    <td class="econ">ECON Workshop and Topic Questions 4</td>
+                    <td class="econ">ECON Workshop and Topic Questions 8</td>
+                    <td class="econ">ECON Sample Final 3</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="free">Post-Exam Break</td>
+                    <td class="compsci220">CS220 Tutorial 9</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="physics">PHYS Coursebook Rev</td>
+                    <td class="physics">PHYS 2018 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="free">Post-Exam Break</td>
+                    <td class="compsci210">CS210 Coderunner 9-10</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers Review</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">21:00</td>
+                    <td class="econ">ECON Workshop and Topic Questions 1</td>
+                    <td class="econ">ECON Workshop and Topic Questions 2</td>
+                    <td class="econ">ECON Workshop and Topic Questions 4</td>
+                    <td class="econ">ECON Workshop and Topic Questions 8</td>
+                    <td class="econ">ECON Sample Final 3</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="compsci220">CS220 Tutorial 5</td>
+                    <td class="compsci220">CS220 Tutorial 9</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="physics">PHYS Coursebook Rev</td>
+                    <td class="physics">PHYS 2018 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="compsci210">CS210 Coderunner 1-2</td>
+                    <td class="compsci210">CS210 Coderunner 9-10</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers Review</td>
+                    <td class="compsci210">CS210 Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">22:00</td>
+                    <td class="econ">ECON Workshop and Topic Questions 1</td>
+                    <td class="compsci220">CS220 Hashing Videos</td>
+                    <td class="econ">ECON Workshop and Topic Questions 4</td>
+                    <td class="econ">ECON Workshop and Topic Questions 9</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="compsci220">CS220 Tutorial 5</td>
+                    <td class="compsci220">CS220 Tutorial 10</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="physics">PHYS Coursebook Rev</td>
+                    <td class="physics">PHYS 2019 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="compsci210">CS210 Coderunner 1-2</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers Review</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">23:00</td>
+                    <td class="econ">ECON Workshop and Topic Questions 1</td>
+                    <td class="compsci220">CS220 Hashing Videos</td>
+                    <td class="econ">ECON Workshop and Topic Questions 4</td>
+                    <td class="econ">ECON Workshop and Topic Questions 9</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="econ">ECON Final Review</td>
+                    <td class="free">Free Time</td>
+                    <td class="compsci220">CS220 Tutorial 10</td>
+                    <td class="compsci220">CS220 Past Paper</td>
+                    <td class="compsci220">CS220 Past Paper Review</td>
+                    <td class="physics">PHYS Coursebook Rev</td>
+                    <td class="physics">PHYS 2019 Final</td>
+                    <td class="physics">PHYS Past Paper Review</td>
+                    <td class="free">Free Time</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers</td>
+                    <td class="compsci210">CS210 Past Papers Review</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Free Time</td>
+                </tr>
+                <tr>
+                    <td class="time-col">0:00</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                    <td class="free">Sleep/Nap</td>
+                </tr>
+            </tbody>
+        </table>
+            <ul style
